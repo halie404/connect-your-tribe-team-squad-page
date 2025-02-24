@@ -5,7 +5,7 @@
 {% for message in messages %}
 <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
 {% else %}
-<p>Er zijn nog geen berichten voor dit team.</p>
+<p>Test?</p>
 {% endfor %}
 
 <h2>Voeg een bericht toe</h2>
@@ -20,3 +20,5 @@
   </label>
   <button type="submit">Verstuur</button>
 </form>
+
+halloo
