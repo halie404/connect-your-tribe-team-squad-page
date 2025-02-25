@@ -2,3 +2,8 @@
 {% render 'partials/head_detail.liquid', title: 'Squad page' %}
 {% comment %} <header></header> {% endcomment %}
 {% render 'partials/header.liquid' %}
+
+<a href="/">Back</a>
+<pre>{{ person | json | replace: ',', ',\n' | replace: '{', '{\n' | replace: '[', '[\n' }}</pre>
+<img src="{{person.avatar}}" alt="">
+<li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
