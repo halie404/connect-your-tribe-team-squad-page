@@ -83,16 +83,12 @@ app.get('/most_energy/:most_energy', async function (request, response) {
     const filteredResponseJSON = await filteredResponse.json()
     response.render('index.liquid', {persons: filteredResponseJSON.data})
   }
+  // Gebruik de mensen die flexibel zijn (null waarde bij most energy)
   else{
     const filteredResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"squads":{"squad_id":{"name":"1G"}}},{"most_energy":{"_null":"true"}}]}')
     const filteredResponseJSON = await filteredResponse.json()
     response.render('index.liquid', {persons: filteredResponseJSON.data})
   }
-  // En haal daarvan de JSON op
-
-  
-  // Render student.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd person
-  // Geef ook de eerder opgehaalde squad data mee aan de view
 
 })
 
