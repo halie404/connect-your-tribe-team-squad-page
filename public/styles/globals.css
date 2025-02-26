@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Inter";
+    src: 
+      url("fonts/Inter-Variable.woff2") format("woff2 supports variations"),
+      url("fonts/Inter-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: 
+      url("fonts/Inter-VariableItalic.woff2") format("woff2 supports variations"),
+      url("fonts/Inter-VariableItalic.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+  }
+ 
+
+body{
+    /* Colors */
+    --color-primary: #89e2c1;
+    --color-secondary: rgba(204, 231, 255, 0.5);
+    --color-white: #fff;
+    --color-black: #000;
+    --color-grey: #333;
+    --font-family: 'Inter', sans-serif;
+
+    /* Font sizes */
+    --font-size-xxxl: 6rem; /* 96px */
+    --font-size-xxl: 3rem; /* 48px */
+    --font-size-xl: 2rem; /* 36px */
+    --font-size-l: 1.5rem; /* 24px */
+    --font-size-m: 1rem; /* 16px */
+    --font-size-s: 0.875rem; /* 14px */
+
+    /* Box shadow */
+    --box-shadow:  0px 0px 8px rgba(204, 231, 255, 0.5);
+
+
+
+    /* Base body bg */
+    /* background-color: var(--color-black); */
+}
+
+html{
+    /* Base font, size, color */
+    font-size: 16px;
+    font-family: var(--font-family);
+    color: var(--color-black);
+}
+
+* {
+    /* Basic things to make padding and margin work smooth + no white border around page */
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+a {
+    /* Minimalize a */
+    text-decoration: none;
+    font-size: inherit !important;
+    color: var(--color-black);
+}
+/* Text classes */
+.text-xl{
+    /* Base */
+    @media (min-width: 0px) {
+        /* Desktop */
+    }
+}
+.text-l{
+    /* Base */
+    @media (min-width: 0px) {
+        /* Desktop */
+    }
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.desktop-hidden{
+    @media (min-width: 0){ /* Nog invullen */
+        display: none !important
+    }
+}
+.mobile-hidden{
+    @media (max-width: 0){ /* Nog invullen */
+        display: none !important
+    }
+}
