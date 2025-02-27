@@ -23,14 +23,12 @@ app.get("/student/:id", async function (request, response) {
 
   let quoteResponse = await fetch("https://fdnd.directus.app/items/messages/?filter={\"for\":\"Team Epic / QuoteFor /" + request.params.id + "\"}&fields=from,text&limit=1&sort=-created");
   let quoteResponseJSON = await quoteResponse.json();
-  console.log(quoteResponseJSON);
   let oneQuote;
   if(quoteResponseJSON.data.length > 0) {
     oneQuote = quoteResponseJSON.data[0].text;
   } else {
     oneQuote = false;
   }
-  console.log(oneQuote);
 
 
   const personDetailResponse = await fetch(
@@ -43,9 +41,6 @@ app.get("/student/:id", async function (request, response) {
 // POST
 let messages = [] 
 
-app.get("/student/:id", async function (request, response) {
-  response.render('student.liquid', {messages: messages})
-})
 
 app.post("/student/:id", async function (request, response) {
 
