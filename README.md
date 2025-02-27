@@ -3,6 +3,17 @@
 
 ![Group 140](https://github.com/user-attachments/assets/ced0dcf7-0388-4f51-a8b3-e77fbef24ee3)
 
+## Beschrijving
+
+
+### Dylan
+
+Ik heb me vooral bezig gehouden met de server.js en de POST-Request.
+Hieronder een video waarin te zien is dat de quote aanpasbaar is.
+
+https://github.com/user-attachments/assets/10c28269-143a-4c33-8216-9b3f96b31efd
+
+
 
 ## Kenmerken
 
