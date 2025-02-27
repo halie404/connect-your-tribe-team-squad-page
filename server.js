@@ -101,6 +101,17 @@ app.get("/most_energy/:most_energy", async function (request, response) {
   }
 });
 
+//Route voor detailpagina
+app.get("/detailpage", async function (request, response) {
+  const personDetailResponse = await fetch(
+    "https://fdnd.directus.app/items/person/?filter=%7B%22fav_country%22:%7B%22_nnull%22:%22true%22%7D%7D&fields=name,bio,most_energy,fav_kitchen" + request.params.id
+  );
+  const personDetailResponseJSON = await personDetailResponse.json();
+  response.render("detail.liquid", { person: personDetailResponseJSON.data });
+});
+
+
+
 app.set("port", process.env.PORT || 8000);
 {
   app.listen(app.get("port"), function () {
