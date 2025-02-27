@@ -20,12 +20,10 @@ app.get("/", async function (request, response) {
 
 app.get("/student/:id", async function (request, response) {
   const personDetailResponse = await fetch(
-    "https://fdnd.directus.app/items/person/" + request.params.id + "?fields=name,bio,most_energy,fav_kitchen,avatar"
+    "https://fdnd.directus.app/items/person/" + request.params.id + "?fields=name,bio,most_energy,fav_kitchen"
   );
   const personDetailResponseJSON = await personDetailResponse.json();
-  response.render("student.liquid", {
-    person: personDetailResponseJSON.data,
-  });
+  response.render("student.liquid", {person: personDetailResponseJSON.data,});
 });
 
 // app.post("/", async function (request, response) {

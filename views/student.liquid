@@ -6,21 +6,25 @@
 <a href="/">Back</a>
 
 <main>
-    <pre>{{ person | json | replace: ',', ',\n' | replace: '{', '{\n' | replace: '[', '[\n' }}</pre>
-    <img src="{{person.avatar}}" alt="">
-    <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
-    
-    <form method="post" action="/berichten">
-        <label>
-            <input type="text" name="texten" required>
-        </label>
-        
-        <button type="submit">Submit</button>
-    </form>
+
+    <img class="avatar" src="/assets/{{ person.id }}.png" alt="{{ person.name }}" />
 
     <div>
-        {% for message in messages %} 
-            <p>{{ message }}</p>
-        {% endfor %}
+            <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
+            <pre>{{ person | json | replace: ',', ',\n' | replace: '{', '{\n' | replace: '[', '[\n' }}</pre>
+            
+            <form method="post" action="/berichten">
+                <label>
+                    <input type="text" name="texten" required>
+                </label>
+                
+                <button type="submit">Submit</button>
+            </form>
+
+            <div>
+                {% for message in messages %} 
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
     </div>
  </main>

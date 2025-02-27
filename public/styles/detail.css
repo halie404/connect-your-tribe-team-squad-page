@@ -1,0 +1,52 @@
+main {
+    display: grid;
+    @media (min-width: 400px){
+        grid-template-columns: 1fr 1fr;
+        padding-top: 5em;
+        place-items: center;
+    }
+}
+
+.avatar {
+    max-width: 25rem;
+    height: 20rem;
+    border-radius: 0.2rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 80, 130, 0.2);
+        @media (min-width: 400px){
+        grid-column: 1/2;
+          
+    }
+}
+
+
+li {
+    @media (min-width: 400px){
+        grid-column: 2/3;
+        list-style: none;
+    }
+}
+
+li a {
+    @media (min-width: 400px){
+        font-family: var(--font-family);
+        font-size: var(--font-size-l);
+    }
+}
+
+pre {
+    @media (min-width: 400px){
+        grid-column: 2/3;
+    }
+}
+
+form {
+    @media (min-width: 400px){
+        grid-column: 2/3;
+    }
+}
+
+input {
+    
+}
+
