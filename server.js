@@ -25,6 +25,7 @@ app.get("/student/:id", async function (request, response) {
   const personDetailResponseJSON = await personDetailResponse.json();
   response.render("student.liquid", {
     person: personDetailResponseJSON.data,
+    squads: squadResponseJSON.data,
   });
 });
 
@@ -32,7 +33,7 @@ app.get("/student/:id", async function (request, response) {
 //   await fetch("https://fdnd.directus.app/items/messages/", {
 //     method: "POST",
 //     body: JSON.stringify({
-//       for: `Team Epic / Quote / `,
+//       for: `Team ${teamName}`,
 //       from: request.body.from,
 //       text: request.body.text,
 //     }),
@@ -98,15 +99,6 @@ app.get("/most_energy/:most_energy", async function (request, response) {
     const filteredResponseJSON = await filteredResponse.json();
     response.render("index.liquid", { persons: filteredResponseJSON.data });
   }
-});
-
-//Route voor detailpagina
-app.get("/detailpage", async function (request, response) {
-  const personDetailResponse = await fetch(
-    "https://fdnd.directus.app/items/person/?filter=%7B%22fav_country%22:%7B%22_nnull%22:%22true%22%7D%7D&fields=name,bio,most_energy,fav_kitchen" + request.params.id
-  );
-  const personDetailResponseJSON = await personDetailResponse.json();
-  response.render("detail.liquid", { person: personDetailResponseJSON.data });
 });
 
 
