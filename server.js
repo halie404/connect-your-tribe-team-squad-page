@@ -25,7 +25,6 @@ app.get("/student/:id", async function (request, response) {
   const personDetailResponseJSON = await personDetailResponse.json();
   response.render("student.liquid", {
     person: personDetailResponseJSON.data,
-    squads: squadResponseJSON.data,
   });
 });
 
@@ -33,7 +32,7 @@ app.get("/student/:id", async function (request, response) {
 //   await fetch("https://fdnd.directus.app/items/messages/", {
 //     method: "POST",
 //     body: JSON.stringify({
-//       for: `Team ${teamName}`,
+//       for: `Team Epic / Quote / `,
 //       from: request.body.from,
 //       text: request.body.text,
 //     }),
