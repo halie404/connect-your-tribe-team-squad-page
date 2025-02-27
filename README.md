@@ -5,7 +5,6 @@
 
 ## Beschrijving
 
-
 ### Dylan
 
 Ik heb me vooral bezig gehouden met de server.js en de POST-Request.
@@ -14,6 +13,20 @@ Hieronder een video waarin te zien is dat de quote aanpasbaar is.
 https://github.com/user-attachments/assets/10c28269-143a-4c33-8216-9b3f96b31efd
 
 
+
+### Karima
+Ik ben verantwoordelijk geweest voor de detailpagina. Als je vanuit de homepage klikt op een specifiek persoon kom je op de detailpagina. Hierin staat de naam, bio, meeste energie, en favoriete gerecht. Ook staat er op het laatst een formulier waarin de student een quote kan toevoegen. Na het submitten van de quote wordt de quote opgeslagen in de database. De laatst getypte quote komt onder de foto te staan (feedback, zie hierboven). De detailpagina is responsive. Op een mobiele scherm wordt alle content onder elkaar geplaatst (one-column-layout). Op een grotere scherm verandert de lay-out in een two-column-layout. De foto en quote komen aan de linkerkant te staan, waar de informatie over de student aan de rechterkant staat.
+
+![image](https://github.com/user-attachments/assets/58be9395-452e-4ff2-a329-323d97cedcb3)
+
+Dit is een demonstratie van het invoeren van de quote:
+
+https://github.com/user-attachments/assets/145c00f9-c6bb-4340-8ff6-e7e3aeb4f56e
+
+#### Styling
+De styling is gebasseerd op de homepagina. De kleur van de logo heb ik terug laten komen in de 'back' en 'submit' button. Ook is de paarse kleur terug te vinden als box-shadow om de inputveld (law of similarity). Op de buttons is feedforward toegepast door de buttons een label te geven. 
+
+![image](https://github.com/user-attachments/assets/18451508-fe8e-4ef1-962f-7a3f65d4c43f)
 
 ## Kenmerken
 
