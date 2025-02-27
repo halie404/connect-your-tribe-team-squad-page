@@ -4,7 +4,7 @@ main {
             grid-template-columns: 1fr 1fr;
             place-items: center;
             column-gap: 5em;
-            height: 90vh; 
+            height: 80vh; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -13,7 +13,7 @@ main {
 
 .avatar {
     max-width: 25rem;
-    height: 20rem;
+    height: 25rem;
     border-radius: 0.2rem;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 80, 130, 0.2);
@@ -52,11 +52,16 @@ pre {
         @media (min-width: 400px){
             grid-column: 2/3;
         }
+    p {
+        margin: 0;
+        padding: 0;               
+        }
 }
 
 form {
     display: flex;
     flex-direction: column;
+    margin-left: 1em;
         @media (min-width: 400px){
             grid-column: 2/3;
         }
@@ -69,9 +74,7 @@ form {
         background-color: #000b11;
         border: #000b11;
         margin-top: 2em;
-        [type="text"] {
-            color: var(--color-white);
-        }
+        
     }
 
     .submit-quote {
@@ -81,6 +84,9 @@ form {
     }
 }
 
+input[type="text"] {
+    color: white;
+}
 
 
 

@@ -26,21 +26,38 @@ app.get("/student/:id", async function (request, response) {
   response.render("student.liquid", {person: personDetailResponseJSON.data,});
 });
 
-// app.post("/", async function (request, response) {
-//   await fetch("https://fdnd.directus.app/items/messages/", {
-//     method: "POST",
-//     body: JSON.stringify({
-//       for: `Team ${teamName}`,
-//       from: request.body.from,
-//       text: request.body.text,
-//     }),
-//     headers: {
-//       "Content-Type": "application/json;charset=UTF-8",
-//     },
-//   });
+let messages = []
+ 
+app.get("/student/:id", async function (request, response) {
+  response.render('student.liquid', {messages: messages})
+})
+ 
+app.post("/student/:id", async function (request, response) {
+  messages.push (request.body.texten)
+  response.redirect(303, "/student/:id")
+})
 
-//   response.redirect(303, "/");
-// });
+
+// POST
+app.post("/student/:id", async function (request, response) {
+  // Add the quote to the messages array
+  // messages.push(request.body.texten);
+ 
+  // Add the message to the Directus API
+  await fetch("https://fdnd.directus.app/items/messages/", {
+    method: "POST",
+    body: JSON.stringify({
+      for: request.params.id,
+      text: request.body.message,
+    }),
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  });
+ 
+  // Redirect to the student page to display the latest message
+  response.redirect(303, `/student/:id${request.params.id}`);
+});
 
 app.get("/", async function (request, response) {
   // Haal alle personen uit de WHOIS API op, van dit jaar

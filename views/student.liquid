@@ -11,9 +11,18 @@
 
     <div>
             <li><a class="name-student" href="/student/{{ person.id }}">{{ person.name }}</a></li>
-            <pre>{{ person | json | replace: ',', ',\n' | replace: '{', '{\n' | replace: '[', '[\n' }}</pre>
-            
-            <form method="post" action="/berichten">
+            {% comment %} <pre>{{ person | json | replace: ',', ',\n' | replace: '{', '{\n' | replace: '[', '[\n' }}</pre> {% endcomment %}
+
+            <pre>
+                <p>{{ person.bio }}</p>
+                <p><strong>Most energy:</strong> {{ person.most_energy }}</p>
+                <p><strong>Favorite kitchen:</strong> {{ person.fav_kitchen }}</p>
+            </pre>             
+
+            {% comment %} <form method="post" action="/student/:id">
+
+                <p><strong>Voeg quote toe:</strong></p>
+
                 <label>
                     <input type="text" name="texten" required>
                 </label>
@@ -26,5 +35,19 @@
                     <p>{{ message }}</p>
                 {% endfor %}
             </div>
-    </div>
+    </div> {% endcomment %}
+
+    <form method="post" action="/student/{{ person.id }}">
+<p><strong>Voeg quote toe:</strong></p>
+<label>
+<input type="text" name="texten" required>
+</label>
+<button class="submit-quote" type="submit">Submit</button>
+</form>
+ 
+<div>
+    {% for message in messages %}
+<p>{{ message }}</p>
+    {% endfor %}
+</div>
  </main>
