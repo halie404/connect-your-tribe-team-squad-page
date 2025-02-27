@@ -1,23 +1,32 @@
+<section id="wrapper" class="filter-wrapper">
 
-  <section id="wrapper" class="filter-wrapper"> 
-    <div class="vector-wrapper"> 
-        <h1>Ochtendmens</h1>
-         <div class="image-container">
-         <img src="assets/sun-vector.png" alt="">
-          </div> 
-          </div> 
-          <div class="vector-wrapper">
-             <h1>Flexible</h1> 
-             <div class="image-container">
-                 <img src="assets/inbetween-vector.png" alt=""> 
-             </div> 
-             </div> 
-             
-             <div class="vector-wrapper">
-               <h1>Avondmens</h1> 
-               <div class="image-container"> 
-                
-                <img src="assets/moon-vector.png" alt=""> 
-                </div> 
-                </div> 
-                </section> 
+  <div class="vector-wrapper {% if most_energy == "morning" %} active {% else %} dimmed {% endif %}">
+    <a href="/most_energy/morning" class="link-energy">
+      <h1>Ochtendmens</h1>
+      <div class="image-container">
+        <img src="/assets/sun-vector.png" alt="">
+      </div>
+    </a>
+  </div>
+  <div class="vector-wrapper {% if most_energy == null %} active {% else %} dimmed {% endif %}">
+    <a href="/most_energy/flexible" class="link-energy">  
+      <h1>Flexible</h1>
+        <div class="image-container">
+          <img src="/assets/inbetween-vector.png" alt="">
+        </div>
+    </a>
+
+  </div>
+
+  <div class="vector-wrapper  {% if most_energy == "evening" %} active {% else %} dimmed {% endif %}">
+    <a href="/most_energy/evening" class="link-energy"> 
+      <h1>Avondmens</h1>
+      <div class="image-container">
+
+        <img src="/assets/moon-vector.png" alt="">
+      </div>
+    </a>
+  </div>
+
+
+</section>

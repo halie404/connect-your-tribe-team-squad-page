@@ -1,0 +1,10 @@
+<div class="mugshots-wrapper">
+
+    {% for person in persons %}
+        <div class="mugshot-student">
+            <img src="/assets/{{ person.id }}.png" alt="{{ person.name }}" />
+            <p>Name: {{ person.name }}</p>
+            <p>Squad: {{ person.squads[0].squad_id.name }}</p>
+        </div>
+    {% endfor %}
+</div>

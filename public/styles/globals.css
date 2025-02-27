@@ -61,7 +61,7 @@ a {
     /* Minimalize a */
     text-decoration: none;
     font-size: inherit !important;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 /* Text classes */
 .text-xl{

@@ -83,17 +83,13 @@ app.get("/most_energy/:most_energy", async function (request, response) {
   // Gebruik de request parameter id en haal de juiste persoon uit de WHOIS API op
   if (request.params.most_energy != "flexible") {
     console.log(
-      'https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"squads":{"squad_id":{"name":"1G"}}},{"most_energy":{"_icontains":"' +
-        request.params.most_energy +
-        '"}}]}'
+      'https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"squads":{"squad_id":{"name":"1G"}}},{"most_energy":{"_icontains":"' + request.params.most_energy + '"}}]}'
     );
     const filteredResponse = await fetch(
-      'https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"squads":{"squad_id":{"name":"1G"}}},{"most_energy":{"_icontains":"' +
-        request.params.most_energy +
-        '"}}]}'
+      'https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"squads":{"squad_id":{"name":"1G"}}},{"most_energy":{"_icontains":"' + request.params.most_energy + '"}}]}'
     );
     const filteredResponseJSON = await filteredResponse.json();
-    response.render("index.liquid", { persons: filteredResponseJSON.data });
+    response.render("index.liquid", { persons: filteredResponseJSON.data, most_energy: request.params.most_energy });
   }
   // Gebruik de mensen die flexibel zijn (null waarde bij most energy)
   else {

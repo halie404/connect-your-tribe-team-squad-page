@@ -15,7 +15,7 @@ body {
 }
 
 .main-nav {
-  background-color: #89e2c1;
+  background-color: var(--color-primary);
   height: 8rem;
 }
 
