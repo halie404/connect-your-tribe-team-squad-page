@@ -45,3 +45,40 @@ https://github.com/halie404/connect-your-tribe-team-squad-page/blob/b9e69e0349ec
 De Liquid template student.liquid gebruikt de data om dynamisch HTML te genereren:
 
 https://github.com/halie404/connect-your-tribe-team-squad-page/blob/b9e69e0349ecfe795a16168affb88a333e4560f6/views/student.liquid#L22-L25
+
+## Installatie
+
+Om dit project lokaal te installeren en te draaien, volg je de onderstaande stappen:
+
+### Vereisten
+- Node.js (versie 14 of hoger)
+- npm (Node Package Manager, wordt meestal samen met Node.js geïnstalleerd)
+- GitHub Desktop (niet per se nodig, maar werkt fijn)
+
+### Stappen
+
+1. **Clone de repository**
+    - Ga naar de repository: https://github.com/halie404/connect-your-tribe-team-squad-page
+    - Klik op Code (groene knop) -> Open with GitHub Desktop
+    - Klik op Clone
+    - Selecteer "For my own purposes"
+
+2. **Open het project in je codeeditor**
+
+3. **Installeer de afhankelijkheden**
+   - Gebruik npm om de benodigde pakketten te installeren door het volgende commando in de terminal uit te voeren:
+   ```bash
+   npm install
+   ```
+
+4. **Start de ontwikkelserver**
+   - Start de server met het volgende commando:
+   ```bash
+   npm start
+   ```
+
+5. **Open de applicatie in je browser**
+   - De server draait nu op `http://localhost:8000`. Open deze URL in je webbrowser om de applicatie te bekijken.
+
+Volg deze stappen om de ontwikkelomgeving in te richten en aan de repository te kunnen werken. Als je vragen hebt of tegen problemen aanloopt, neem contact op met de projectbeheerders (Halima, Karima, Dylan).
+
