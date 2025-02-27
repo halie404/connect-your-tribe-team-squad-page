@@ -59,7 +59,7 @@ app.get("/", async function (request, response) {
 
   // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
   // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render("index.liquid", { persons: personResponseJSON.data });
+  response.render("index.liquid", { persons: personResponseJSON.data, filtered: false });
 });
 
 // Maak een GET route voor een detailpagina met een route parameter, id
@@ -89,7 +89,7 @@ app.get("/most_energy/:most_energy", async function (request, response) {
       'https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"squads":{"squad_id":{"name":"1G"}}},{"most_energy":{"_icontains":"' + request.params.most_energy + '"}}]}'
     );
     const filteredResponseJSON = await filteredResponse.json();
-    response.render("index.liquid", { persons: filteredResponseJSON.data, most_energy: request.params.most_energy });
+    response.render("index.liquid", { persons: filteredResponseJSON.data, most_energy: request.params.most_energy, filtered: true});
   }
   // Gebruik de mensen die flexibel zijn (null waarde bij most energy)
   else {
@@ -97,7 +97,7 @@ app.get("/most_energy/:most_energy", async function (request, response) {
       'https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"squads":{"squad_id":{"name":"1G"}}},{"most_energy":{"_null":"true"}}]}'
     );
     const filteredResponseJSON = await filteredResponse.json();
-    response.render("index.liquid", { persons: filteredResponseJSON.data });
+    response.render("index.liquid", { persons: filteredResponseJSON.data, filtered: true });
   }
 });
 

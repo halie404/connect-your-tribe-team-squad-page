@@ -1,6 +1,6 @@
 <section id="wrapper" class="filter-wrapper">
 
-  <div class="vector-wrapper {% if most_energy == "morning" %} active {% else %} dimmed {% endif %}">
+  <div class="vector-wrapper {% if most_energy == "morning" and filtered %} active {% elsif filtered %} dimmed {% endif %}">
     <a href="/most_energy/morning" class="link-energy">
       <h1>Ochtendmens</h1>
       <div class="image-container">
@@ -8,7 +8,7 @@
       </div>
     </a>
   </div>
-  <div class="vector-wrapper {% if most_energy == null %} active {% else %} dimmed {% endif %}">
+  <div class="vector-wrapper {% if most_energy == null and filtered %} active {% elsif filtered %} dimmed {% endif %}">
     <a href="/most_energy/flexible" class="link-energy">  
       <h1>Flexible</h1>
         <div class="image-container">
@@ -18,7 +18,7 @@
 
   </div>
 
-  <div class="vector-wrapper  {% if most_energy == "evening" %} active {% else %} dimmed {% endif %}">
+  <div class="vector-wrapper  {% if most_energy == "evening" and filtered %} active {% elsif filtered %} dimmed {% endif %}">
     <a href="/most_energy/evening" class="link-energy"> 
       <h1>Avondmens</h1>
       <div class="image-container">
