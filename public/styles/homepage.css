@@ -88,7 +88,7 @@ button {
     gap: 12rem;
     row-gap: 20px;
     .vector-wrapper:nth-of-type(2){
-      order: 2;
+      order: initial;
     }
     .vector-wrapper{
       width: initial;
