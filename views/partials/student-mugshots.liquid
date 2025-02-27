@@ -2,9 +2,11 @@
 
     {% for person in persons %}
         <div class="mugshot-student">
+            <a href="/student/{{ person.id  }}">
             <img src="/assets/{{ person.id }}.png" alt="{{ person.name }}" />
             <p>Name: {{ person.name }}</p>
             <p>Squad: {{ person.squads[0].squad_id.name }}</p>
+            </a>
         </div>
     {% endfor %}
 </div>
