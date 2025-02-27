@@ -14,7 +14,20 @@ main {
 .back-home {
     padding: 1em;
 }
-
+.container-avatar-quote{
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+blockquote{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    hyphens: auto;
+    max-width: 300px;
+    word-break: break-word;
+}
 
 .avatar {
     max-width: 25rem;
@@ -25,6 +38,8 @@ main {
     margin-top: 3em;
         @media (min-width: 400px){
         grid-column: 1/2;
+        margin-left: auto;
+        margin-right: auto;
           
     }
 }

@@ -6,8 +6,13 @@
 <a class="back-home" href="/">Back</a>
 
 <main>
-
-    <img class="avatar" src="/assets/{{ person.id }}.png" alt="{{ person.name }}" />
+    <div class="container-avatar-quote">
+        <img class="avatar" src="/assets/{{ person.id }}.png" alt="{{ person.name }}" />
+        
+        {% if personalQuote %}
+            <blockquote>"{{ personalQuote }}"</blockquote>
+        {% endif  %}
+    </div>
 
     <div>
             <li><a class="name-student" href="/student/{{ person.id }}">{{ person.name }}</a></li>
@@ -20,13 +25,14 @@
                 <p><strong>Most energy:</strong> {{ person.most_energy }}</p>
                 <p><strong>Favorite kitchen:</strong> {{ person.fav_kitchen }}</p>
             </pre>             
-
             <form method="post" action="/student/{{ person.id }}">
 
                 <p><strong>Voeg quote toe:</strong></p>
 
+                <input type="hidden" name="person_name" value="{{ person.name }}">
+                
                 <label>
-                    <input type="text" name="texten" required>
+                    <input type="text" name="message" required>
                 </label>
                 
                 <button class="submit-quote" type="submit">Submit</button>

@@ -18,12 +18,26 @@ app.get("/", async function (request, response) {
   response.render("index.liquid", { persons: personResponseJSON.data });
 });
 
+
 app.get("/student/:id", async function (request, response) {
+
+  let quoteResponse = await fetch("https://fdnd.directus.app/items/messages/?filter={\"for\":\"Team Epic / QuoteFor /" + request.params.id + "\"}&fields=from,text&limit=1&sort=-created");
+  let quoteResponseJSON = await quoteResponse.json();
+  console.log(quoteResponseJSON);
+  let oneQuote;
+  if(quoteResponseJSON.data.length > 0) {
+    oneQuote = quoteResponseJSON.data[0].text;
+  } else {
+    oneQuote = false;
+  }
+  console.log(oneQuote);
+
+
   const personDetailResponse = await fetch(
-    "https://fdnd.directus.app/items/person/" + request.params.id + "?fields=name,bio,most_energy,fav_kitchen"
+    "https://fdnd.directus.app/items/person/" + request.params.id + "?fields=name,bio,most_energy,fav_kitchen,id"
   );
   const personDetailResponseJSON = await personDetailResponse.json();
-  response.render("student.liquid", { person: personDetailResponseJSON.data, });
+  response.render("student.liquid", { person: personDetailResponseJSON.data, personalQuote: oneQuote });
 });
 
 // POST
@@ -33,9 +47,21 @@ app.get("/student/:id", async function (request, response) {
   response.render('student.liquid', {messages: messages})
 })
 
-app.post("/student/{{ person.id }}", async function (request, response) {
-  messages.push (request.body.texten) 
-  response.redirect(303, "/student/{{ person.id }}")
+app.post("/student/:id", async function (request, response) {
+
+    await fetch("https://fdnd.directus.app/items/messages/", {
+    method: "POST",
+    body: JSON.stringify({
+      for: `Team Epic / QuoteFor /` + request.params.id,
+      from: request.body.person_name,
+      text: request.body.message,
+    }),
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  });
+
+  response.redirect(303, "/student/"  + request.params.id);
 })
 
 
