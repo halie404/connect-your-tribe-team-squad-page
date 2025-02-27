@@ -17,6 +17,9 @@ body {
 .site-header {
   background-color: var(--color-primary);
   height: 8rem;
+  a{
+    display: flex;
+  }
 }
 
 button {
@@ -30,14 +33,6 @@ button {
   margin-top: 2rem;
 }
 
-.mugshots-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5rem;
-  min-height: 100vh;
-  padding: 5rem 20rem;
-}
 
 .mugshot-student {
   /* display: flex;
@@ -84,17 +79,16 @@ button {
     margin-bottom: 3rem;
     text-align: center;
   }
-}
-
-.vector-wrapper.dimmed {
-  opacity: 0.1;
-  transition: opacity 0.3s ease-in-out;
-
-  &:hover {
-    opacity: 1;
-    transform: none;
+  &.dimmed{
+    opacity: 0.1;
+    transition: opacity 0.3s ease-in-out;
+  
+    &:hover {
+      opacity: 1;
+      transform: none;
+    }
   }
-}
-.vector-wrapper.active {
-  transform: scale(1.2);
+  &.active{
+    transform: scale(1.2);
+  }
 }
