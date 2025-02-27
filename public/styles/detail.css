@@ -12,8 +12,15 @@ main {
 }
 
 .back-home {
-    padding: 1em;
+    padding: .5em;
+    margin-left: 1em;
+    color: var(--color-black);
+    width: 10em;
+    background-color: #C593FF;
+    border-radius: 0.2rem;
+    font-size: 13.3px;
 }
+
 .container-avatar-quote{
     display: grid;
     flex-direction: column;
@@ -103,7 +110,7 @@ form {
     .submit-quote {
         margin-top: 2em;
         padding: 1em;
-        color: var(--color-white);
+        color: var(--color-black);
         width: 10em;
         background-color: #C593FF;
         border-radius: 0.2rem;

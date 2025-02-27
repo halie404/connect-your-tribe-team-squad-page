@@ -33,6 +33,7 @@ body{
     --font-size-l: 1.5rem; /* 24px */
     --font-size-m: 1rem; /* 16px */
     --font-size-s: 0.875rem; /* 14px */
+    --font-size-xs: 0.833em /* 13.3 px*/
 
     /* Box shadow */
     --box-shadow:  0px 0px 8px rgba(204, 231, 255, 0.5);
