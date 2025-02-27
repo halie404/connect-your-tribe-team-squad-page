@@ -3,7 +3,7 @@
 {% comment %} <header></header> {% endcomment %}
 {% render 'partials/header.liquid' %}
 
-<a href="/">Back</a>
+<a class="back-home" href="/">Back</a>
 
 <main>
 
@@ -12,14 +12,16 @@
     <div>
             <li><a class="name-student" href="/student/{{ person.id }}">{{ person.name }}</a></li>
             {% comment %} <pre>{{ person | json | replace: ',', ',\n' | replace: '{', '{\n' | replace: '[', '[\n' }}</pre> {% endcomment %}
-
+            
+            <hr>
+            
             <pre>
                 <p>{{ person.bio }}</p>
                 <p><strong>Most energy:</strong> {{ person.most_energy }}</p>
                 <p><strong>Favorite kitchen:</strong> {{ person.fav_kitchen }}</p>
             </pre>             
 
-            {% comment %} <form method="post" action="/student/:id">
+            <form method="post" action="/student/{{ person.id }}">
 
                 <p><strong>Voeg quote toe:</strong></p>
 
@@ -35,19 +37,7 @@
                     <p>{{ message }}</p>
                 {% endfor %}
             </div>
-    </div> {% endcomment %}
+    </div> 
 
-    <form method="post" action="/student/{{ person.id }}">
-<p><strong>Voeg quote toe:</strong></p>
-<label>
-<input type="text" name="texten" required>
-</label>
-<button class="submit-quote" type="submit">Submit</button>
-</form>
- 
-<div>
-    {% for message in messages %}
-<p>{{ message }}</p>
-    {% endfor %}
-</div>
+   
  </main>

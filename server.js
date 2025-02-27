@@ -23,41 +23,38 @@ app.get("/student/:id", async function (request, response) {
     "https://fdnd.directus.app/items/person/" + request.params.id + "?fields=name,bio,most_energy,fav_kitchen"
   );
   const personDetailResponseJSON = await personDetailResponse.json();
-  response.render("student.liquid", {person: personDetailResponseJSON.data,});
+  response.render("student.liquid", { person: personDetailResponseJSON.data, });
 });
 
-let messages = []
- 
+// POST
+let messages = [] 
+
 app.get("/student/:id", async function (request, response) {
   response.render('student.liquid', {messages: messages})
 })
- 
-app.post("/student/:id", async function (request, response) {
-  messages.push (request.body.texten)
-  response.redirect(303, "/student/:id")
+
+app.post("/student/{{ person.id }}", async function (request, response) {
+  messages.push (request.body.texten) 
+  response.redirect(303, "/student/{{ person.id }}")
 })
 
 
-// POST
-app.post("/student/:id", async function (request, response) {
-  // Add the quote to the messages array
-  // messages.push(request.body.texten);
- 
-  // Add the message to the Directus API
-  await fetch("https://fdnd.directus.app/items/messages/", {
-    method: "POST",
-    body: JSON.stringify({
-      for: request.params.id,
-      text: request.body.message,
-    }),
-    headers: {
-      "Content-Type": "application/json;charset=UTF-8",
-    },
-  });
- 
-  // Redirect to the student page to display the latest message
-  response.redirect(303, `/student/:id${request.params.id}`);
-});
+// app.post("/", async function (request, response) {
+//   await fetch("https://fdnd.directus.app/items/messages/", {
+//     method: "POST",
+//     body: JSON.stringify({
+//       for: `Team ${teamName}`,
+//       from: request.body.from,
+//       text: request.body.text,
+//     }),
+//     headers: {
+//       "Content-Type": "application/json;charset=UTF-8",
+//     },
+//   });
+
+//   response.redirect(303, "/");
+// });
+
 
 app.get("/", async function (request, response) {
   // Haal alle personen uit de WHOIS API op, van dit jaar
@@ -76,20 +73,7 @@ app.get("/", async function (request, response) {
   response.render("index.liquid", { persons: personResponseJSON.data, filtered: false });
 });
 
-// Maak een GET route voor een detailpagina met een route parameter, id
-// Zie de documentatie van Express voor meer info: https://expressjs.com/en/guide/routing.html#route-parameters
-app.get("/student/:id", async function (request, response) {
-  // Gebruik de request parameter id en haal de juiste persoon uit de WHOIS API op
-  const personDetailResponse = await fetch(
-    "https://fdnd.directus.app/items/person/" + request.params.id
-  );
-  // En haal daarvan de JSON op
-  const personDetailResponseJSON = await personDetailResponse.json();
 
-  // Render student.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd person
-  // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render("student.liquid", { person: personDetailResponseJSON.data });
-});
 
 // Maak een GET route voor een detailpagina met een route parameter, id
 // Zie de documentatie van Express voor meer info: https://expressjs.com/en/guide/routing.html#route-parameters

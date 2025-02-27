@@ -11,6 +11,11 @@ main {
         }
 }
 
+.back-home {
+    padding: 1em;
+}
+
+
 .avatar {
     max-width: 25rem;
     height: 25rem;
@@ -29,6 +34,7 @@ li {
     padding-top: 2em;
     list-style: none;
     padding-left: 1em;
+    margin-bottom: 1em;
         @media (min-width: 400px){
             grid-column: 2/3;
             margin-bottom: 1em;
@@ -44,6 +50,10 @@ li {
     }
 }
 
+hr {
+    max-width: 19em;
+    margin-left: 1em;
+}
 
 pre {
     margin-left: 1em;
@@ -52,11 +62,9 @@ pre {
         @media (min-width: 400px){
             grid-column: 2/3;
         }
-    p {
-        margin: 0;
-        padding: 0;               
-        }
+    
 }
+
 
 form {
     display: flex;
@@ -78,9 +86,12 @@ form {
     }
 
     .submit-quote {
-        padding-top: 2em;
+        margin-top: 2em;
+        padding: 1em;
         color: var(--color-white);
-        width: 20em;
+        width: 10em;
+        background-color: #C593FF;
+        border-radius: 0.2rem;
     }
 }
 
