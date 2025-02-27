@@ -1,9 +1,13 @@
 main {
     display: grid;
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media (min-width: 400px){
         grid-template-columns: 1fr 1fr;
-        padding-top: 5em;
         place-items: center;
+        column-gap: 5em;
     }
 }
 
@@ -13,6 +17,7 @@ main {
     border-radius: 0.2rem;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 80, 130, 0.2);
+    margin-top: 3em;
         @media (min-width: 400px){
         grid-column: 1/2;
           
@@ -21,20 +26,29 @@ main {
 
 
 li {
+    padding-top: 2em;
+    list-style: none;
+    padding-left: 1em;
     @media (min-width: 400px){
         grid-column: 2/3;
-        list-style: none;
+        margin-bottom: 1em;
+    }
+
+    a {
+    color: var(--color-white);
+    font-weight: bold; 
+    font-size: var(--font-size-l);
+        @media (min-width: 400px){
+            font-size: var(--font-size-xl);
+        }
     }
 }
 
-li a {
-    @media (min-width: 400px){
-        font-family: var(--font-family);
-        font-size: var(--font-size-l);
-    }
-}
 
 pre {
+    margin-left: 1em;
+    white-space: pre-wrap; 
+    max-width: 350px;
     @media (min-width: 400px){
         grid-column: 2/3;
     }
@@ -47,6 +61,15 @@ form {
 }
 
 input {
-    
+    height: 4em;
+    width: 20em;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 10px rgba(0, 80, 130, 0.2);
+    background-color: #000b11;
+    border: #000b11;
+    margin-top: 2em;
 }
 
+p {
+    color: var(--color-white);
+}

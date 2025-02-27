@@ -60,9 +60,9 @@ html{
 a {
     /* Minimalize a */
     text-decoration: none;
-    font-size: inherit !important;
     color: var(--color-white);
 }
+
 /* Text classes */
 .text-xl{
     /* Base */

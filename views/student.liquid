@@ -10,7 +10,7 @@
     <img class="avatar" src="/assets/{{ person.id }}.png" alt="{{ person.name }}" />
 
     <div>
-            <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
+            <li><a class="name-student" href="/student/{{ person.id }}">{{ person.name }}</a></li>
             <pre>{{ person | json | replace: ',', ',\n' | replace: '{', '{\n' | replace: '[', '[\n' }}</pre>
             
             <form method="post" action="/berichten">
