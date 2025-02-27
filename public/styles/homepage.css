@@ -87,9 +87,7 @@ button {
     padding: 15rem 24px 0;
     gap: 12rem;
     row-gap: 20px;
-    .vector-wrapper:nth-of-type(2){
-      order: initial;
-    }
+
     .vector-wrapper{
       width: initial;
       h1{
@@ -101,6 +99,11 @@ button {
           margin-bottom: 5rem;
         }
       }
+    }
+  }
+  @media (min-width :937px){
+    .vector-wrapper:nth-of-type(2){
+      order: initial;
     }
   }
 }
