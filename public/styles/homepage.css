@@ -80,6 +80,19 @@ button {
         margin-bottom: 1.5rem;
       }
     }
+    &:hover{
+      
+        opacity: 1 !important;
+        transition: opacity 0.3s ease-in-out;
+      
+    }
+    
+  }
+  &:has(.vector-wrapper:hover){
+    .vector-wrapper{
+      opacity: 0.1;
+      transition: opacity 0.3s ease-in-out;
+    }
   }
 
 
