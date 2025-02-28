@@ -17,7 +17,7 @@ body {
 .site-header {
   background-color: var(--color-primary);
   height: 8rem;
-  a{
+  a {
     display: flex;
   }
 }
@@ -32,7 +32,6 @@ button {
   margin-left: 5rem;
   margin-top: 2rem;
 }
-
 
 .mugshot-student {
   /* display: flex;
@@ -60,62 +59,57 @@ button {
   justify-content: center;
   padding: 7.5rem 24px 0;
   gap: 20px;
-  
+
   row-gap: 20px;
   flex-wrap: wrap;
-  .vector-wrapper:nth-of-type(2){
+  .vector-wrapper:nth-of-type(2) {
     order: 3;
   }
-  .vector-wrapper{
+  .vector-wrapper {
     width: 100%;
-    h1{
+    h1 {
       margin-bottom: 1.5rem;
     }
-    .image-container{
+    .image-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      img{
+      img {
         width: 6rem;
         margin-bottom: 1.5rem;
       }
     }
-    &:hover{
-      
-        opacity: 1 !important;
-        transition: opacity 0.3s ease-in-out;
-      
+    &:hover {
+      opacity: 1 !important;
+      transition: opacity 0.3s ease-in-out;
     }
-    
   }
-  &:has(.vector-wrapper:hover){
-    .vector-wrapper{
+  &:has(.vector-wrapper:hover) {
+    .vector-wrapper {
       opacity: 0.1;
       transition: opacity 0.3s ease-in-out;
     }
   }
 
-
-  @media (min-width: 600px){
-    padding: 15rem 24px 0;
+  @media (min-width: 600px) {
     gap: 12rem;
     row-gap: 20px;
 
-    .vector-wrapper{
+    .vector-wrapper {
       width: initial;
-      h1{
+      h1 {
         margin-bottom: 3rem;
       }
-      .image-container{
-        img{
+      .image-container {
+        img {
           width: 10rem;
           margin-bottom: 5rem;
         }
       }
     }
   }
-  @media (min-width :937px){
-    .vector-wrapper:nth-of-type(2){
+  @media (min-width: 937px) {
+    .vector-wrapper:nth-of-type(2) {
       order: initial;
     }
   }
@@ -138,16 +132,16 @@ button {
     margin-bottom: 3rem;
     text-align: center;
   }
-  &.dimmed{
+  &.dimmed {
     opacity: 0.1;
     transition: opacity 0.3s ease-in-out;
-  
+
     &:hover {
       opacity: 1;
       transform: none;
     }
   }
-  &.active{
+  &.active {
     transform: scale(1.2);
   }
 }

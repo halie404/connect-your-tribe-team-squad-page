@@ -1,0 +1,15 @@
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  background-color: #c593ffee;
+  color: white;
+  font-weight: bold;
+}
+.second-footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  color: #c593ff;
+}

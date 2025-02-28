@@ -1,10 +1,7 @@
-
-
 @import url("./globals.css"); /* Main styling */
 @import url("./header.css"); /* Header */
 @import url("./loop.css"); /* Person loop */
 @import url("./style.css");
 @import url("./homepage.css");
 @import url("./detail.css");
-
-
+@import url("./footer.css");
