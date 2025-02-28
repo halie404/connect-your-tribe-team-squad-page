@@ -31,7 +31,7 @@ https://github.com/user-attachments/assets/145c00f9-c6bb-4340-8ff6-e7e3aeb4f56e
 #### Styling
 De styling is gebasseerd op de homepagina. De kleur van de logo heb ik terug laten komen in de 'back' en 'submit' button. Ook is de paarse kleur terug te vinden als box-shadow om de inputveld (law of similarity). Op de buttons is feedforward toegepast door de buttons een label te geven. 
 
-![image](https://github.com/user-attachments/assets/18451508-fe8e-4ef1-962f-7a3f65d4c43f)
+<img width="635" alt="image" src="https://github.com/user-attachments/assets/735512c7-927f-4d28-a255-ccfc40f32a10" />
 
 ## Kenmerken
 
