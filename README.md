@@ -1,14 +1,27 @@
 # Squadpage team Epic
 
 ## Beschrijving
+Voor deze sprint hebben we een gezamenlijke squadpage gemaakt. De squad is gecategoriseerd op ochtendmens, avondmens of flexibel. 
 
-## Design concept 
 
-![Group 140](https://github.com/user-attachments/assets/ced0dcf7-0388-4f51-a8b3-e77fbef24ee3)
+## Teamleden & bijdragen 
+### Het ontwerp 
+**Halima**
 
-### Teamleden & bijdragen 
 
-Halima
+In de squad page heb ik best veel design gemaakt. Ik heb het concept eerste bedacht voor mijn eerst squad page en daarna heb ik samen met behulp van Dylan en Karima het verbetered. 
+![Group 144 (1)](https://github.com/user-attachments/assets/5ac6458b-e3e5-4693-9e7c-f86901175d7c)
+
+
+
+
+### Concept
+Ik heb een concept in figma gemaakt en vooral de kleuren style van FDND geimplimiteerd. Voor elke kaartje heb ik de favourite kleur van de student gebruikt mocht iemand gestopt zijn of geen mugshot heeft heb ik custom cards gemaakt die een filler zijn. 
+![Group 145](https://github.com/user-attachments/assets/9950aea8-0cc0-42dd-8fcf-54ae9a2789fd)
+<img width="355" alt="image" src="https://github.com/user-attachments/assets/248e2550-612b-4470-b396-527a6b0635c6" />
+
+
+https://github.com/user-attachments/assets/10c28269-143a-4c33-8216-9b3f96b31efd
 
 [Dylan](https://github.com/DivaniNL)
 
@@ -16,6 +29,26 @@ Ik heb me vooral bezig gehouden met de server.js en de POST-Request.
 Hieronder een video waarin te zien is dat de quote aanpasbaar is.
 
 https://github.com/user-attachments/assets/10c28269-143a-4c33-8216-9b3f96b31efd
+
+
+
+### Teamleden & bijdragen 
+**
+Halima**
+In de squad page heb ik best veel design gemaakt. Ik heb het concept eerste bedacht voor mijn eerst squad page en daarna heb ik samen met behulp van Dylan en Karima het verbetered. 
+
+
+
+
+
+
+
+
+### [Dylan](https://github.com/DivaniNL)
+
+Ik heb me vooral bezig gehouden met de server.js en de POST-Request.
+Hieronder een video waarin te zien is dat de quote aanpasbaar is.
+
 
 
 
@@ -31,7 +64,7 @@ https://github.com/user-attachments/assets/145c00f9-c6bb-4340-8ff6-e7e3aeb4f56e
 #### Styling
 De styling is gebasseerd op de homepagina. De kleur van de logo heb ik terug laten komen in de 'back' en 'submit' button. Ook is de paarse kleur terug te vinden als box-shadow om de inputveld (law of similarity). Op de buttons is feedforward toegepast door de buttons een label te geven. 
 
-<img width="635" alt="image" src="https://github.com/user-attachments/assets/735512c7-927f-4d28-a255-ccfc40f32a10" />
+![image](https://github.com/user-attachments/assets/18451508-fe8e-4ef1-962f-7a3f65d4c43f)
 
 ## Kenmerken
 
@@ -110,4 +143,5 @@ Om dit project lokaal te installeren en te draaien, volg je de onderstaande stap
    - De server draait nu op `http://localhost:8000`. Open deze URL in je webbrowser om de applicatie te bekijken.
 
 Volg deze stappen om de ontwikkelomgeving in te richten en aan de repository te kunnen werken. Als je vragen hebt of tegen problemen aanloopt, neem contact op met de projectbeheerders (Halima, Karima, Dylan).
+
 
