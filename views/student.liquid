@@ -5,7 +5,9 @@
 
 
 <main>
-    <div class="container-avatar-quote">
+
+<div class="detail-wrapper">
+      <div class="container-avatar-quote">
         <img class="avatar" src="/assets/{{ person.id }}.png" alt="{{ person.name }}" />
         
         {% if personalQuote %}
@@ -41,7 +43,9 @@
                     <p>{{ message }}</p>
                 {% endfor %}
             </div>
-    </div> 
+    </div>   
+</div>
+
 
    
  </main>
